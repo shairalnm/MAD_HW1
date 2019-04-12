@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">HW1</string>
+    <string name="textViewWeight">Weight (lbs)</string>
+    <string name="textViewEnterWeight">Enter weight</string>
+    <string name="textSwitchOn">Male</string>
+    <string name="textSwitchOff">Female</string>
+    <string name="SwitchGender">Gender</string>
+    <string name="buttonSave">Save</string>
+    <string name="textViewDrinkSize">Drink Size</string>
+    <string name="radioButton1oz">1 oz</string>
+    <string name="radioButton5oz">5 oz</string>
+    <string name="saved_user_label" />
+    <string name="radioButton12oz">12 oz</string>
+    <string name="textViewAlcohol">Alcohol%</string>
+    <string name="buttonAddDrink">Add Drink</string>
+    <string name="alcohol_indicator_label">0%</string>
+    <string name="buttonReset">Reset</string>
+    <string name="textViewBACLevel">BAC Level:</string>
+    <string name="textViewBACLevelDisplay">0.00</string>
+    <string name="TextViewStatusLevel">Your Status:</string>
+    <string name="textViewStatusLevelDisplay">You\'re Safe</string>
+</resources>

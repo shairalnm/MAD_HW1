@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center_vertical|center_horizontal"
+    android:id="@+id/idContainer">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idWeightSection"
+        android:padding="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/textViewWeight"
+            android:id="@+id/idWeightLabel"
+            android:layout_gravity="bottom" />
+
+        <EditText
+            android:id="@+id/idWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginLeft="10dp"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:hint="@string/textViewEnterWeight"
+            android:inputType="number"
+            android:textSize="10dp" />
+
+        <Switch
+            android:id="@+id/idGender"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:enabled="true"
+            android:gravity="center"
+            android:showText="true"
+            android:text="@string/SwitchGender"
+            android:textOff="@string/textSwitchOff"
+            android:textOn="@string/textSwitchOn"
+            android:textSize="10dp"
+            tools:checked="true" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonSave"
+        android:id="@+id/idSave"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/saved_user_label"
+        android:id="@+id/idSavedUserValue"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/idDrinksLayout"
+        android:padding="10dp"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/textViewDrinkSize"
+            android:id="@+id/idDrinkSizeLabel"
+            android:layout_gravity="center_vertical" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:id="@+id/idDrinkSizeGrp"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton1oz"
+                android:id="@+id/id1oz"
+                android:checked="true"
+                android:layout_marginLeft="10dp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton5oz"
+                android:id="@+id/id5oz"
+                android:layout_marginLeft="10dp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton12oz"
+                android:id="@+id/id10oz"
+                android:layout_marginLeft="10dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idAlcoholLayout"
+        android:padding="10dp"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/textViewAlcohol"
+            android:id="@+id/idAlcoholLabel"
+            android:layout_gravity="center_vertical" />
+
+        <SeekBar
+            android:id="@+id/idAlcoholProgress"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:indeterminate="false"
+            android:max="25" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/alcohol_indicator_label"
+            android:id="@+id/idAlcoholSeeker"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonAddDrink"
+            android:id="@+id/idAddDrinkButton" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonReset"
+            android:id="@+id/idAResetButton" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/idBacLevel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="@string/textViewBACLevel"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idBacProgress"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:max="25"
+        android:indeterminate="false" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/TextViewStatusLevel"
+            android:id="@+id/idStatusLabel" />
+
+        <TextView
+            android:id="@+id/idStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:background="@color/safe_background_color"
+            android:text="@string/textViewStatusLevelDisplay"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/status_text_color" />
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
